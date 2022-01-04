@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme+Expanded:wght@800&family=Inknut+Antiqua:wght@800&family=Outfit:wght@400;500;600;800&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #f4f6ff;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 1200px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header nav img {
+    max-width: 100%;
+    height: auto;
+}
+
+header nav ul.nav-list {
+    list-style: none;
+}
+
+header nav ul.nav-list li.nav-item {
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    transition: all .7s ease;
+}
+
+header nav ul.nav-list li.nav-item::after {
+    content: '';
+    position: absolute;
+    border-radius: 50px;
+    bottom: 10%;
+    left: 10%;
+    height: 3px;
+    max-width: 80%;
+    width: 0;
+    background-color: #e87551;
+    transition: all .7s ease;
+}
+
+header nav ul.nav-list li.nav-item:hover::after {
+    width: 100%;
+}
+
+header nav ul.nav-list li.nav-item.active,
+header nav ul.nav-list li.nav-item:hover {
+    opacity: 1;
+}
+
+header nav ul.nav-list li.nav-item a {
+    text-decoration: none;
+    font-family: 'Outfit', sans-serif;
+    color: #373336;
+    opacity: .7;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+header nav button.btn-action {
+    padding: 10px 25px;
+    border: none;
+    background-color: #373336;
+    font-family: 'Outfit', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+main {
+    overflow: hidden;
+    position: relative;
+}
+
+main .home-container {
+    height: calc(100vh - 80px);
+    width: 100%;
+    max-width: 1200px;
+
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: 1fr;
+    row-gap: 0;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main .home-container .hero {
+    font-family: 'Outfit', sans-serif;
+    order: 0;
+}
+
+main .home-container .hero h1 {
+    font-size: 70px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #373336;
+    margin-bottom: 35px;
+    letter-spacing: 3.2px;
+}
+
+main .home-container .hero h1 span {
+    color: #e87551;
+}
+
+main .home-container .hero p {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: .7px;
+    color: #a7acc3;
+    margin-bottom: 30px;
+}
+
+main .home-container .hero .btn-group {
+    display: flex;
+}
+
+main .home-container .hero a.start-btn {
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #fff;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e87551;
+    margin-right: 15px;
+}
+
+main .home-container .hero a.watch-btn {
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #373336;
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+main .home-container .hero-detail {
+    position: relative;
+    padding-top: 1.5rem;
+    width: 570px;
+    height: 493px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .home-container .hero-detail span.bg {
+    top: 50%;
+    left: 25%;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.75;
+    transform-origin: 140px 00px;
+    transform: rotate(calc(90deg * var(--i))) translate(-50%, -50%);
+}
+
+main .home-container .hero-detail span.bg:nth-child(1) {
+    background: #FE7E6D;
+}
+
+main .home-container .hero-detail span.bg:nth-child(2) {
+    background: #FFC900;
+}
+
+main .home-container .hero-detail span.bg:nth-child(3) {
+    background: #84DFFF;
+}
+
+main .home-container .hero-detail span.bg:nth-child(4) {
+    background: #DB6B97;
+}
+
+
+main .home-container .hero-detail  .player {
+    height: 100%;
+    width: 100%;
+}
